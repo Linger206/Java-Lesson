@@ -17,8 +17,6 @@ public class cal {
             c.set(Calendar.YEAR,year);
 
             if (month <= 0 || month > 12)   c = Calendar.getInstance(); //wrong month arg
-
-            c.set(Calendar.DATE,1);
         }   catch (Exception e) {
         }
         solution(c);
@@ -50,6 +48,7 @@ public class cal {
         System.out.print(MONTHS[month] + " ");
         System.out.println(year);
 
+        c.set(Calendar.DATE,1);
         int daysinmonth = daysInMonth(c);
         int dayofweek = getDayOfWeek(c);
         System.out.println("Su "+"Mo "+"Tu "+"We "+"Th "+"Fr "+"Sa");
